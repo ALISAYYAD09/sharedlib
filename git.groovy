@@ -1,3 +1,3 @@
 def call() {
-git 'https://github.com/ALISAYYAD09/maven-web-application.git'
+   sh 'git 'https://github.com/ALISAYYAD09/maven-web-application.git''
 }
