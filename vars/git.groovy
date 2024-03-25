@@ -1,3 +1,8 @@
-def call() {
-   sh 'git 'https://github.com/ALISAYYAD09/maven-web-application.git''
-}
+def call(Map stageParams) {
+ 
+    checkout([
+        $class: 'GitSCM',
+        branches: [[name:  stageParams.branch ]],
+        userRemoteConfigs: [[ url: stageParams.url ]]
+    ])
+  }
